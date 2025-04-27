@@ -17,6 +17,10 @@ app.set(express.static('public'));
 // Inportanndo o banco de dados
 const connect = require('./Database/connect');
 
+// importando os models
+const Thought = require('./models/thoughts');
+const User = require('./models/user')
+
 // Configuraçao de session midlewares
 app.use(session({
     name: 'session',
