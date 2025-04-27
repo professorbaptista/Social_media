@@ -12,7 +12,7 @@ const app = express()
 
 app.engine('handlebars', exphbs.engine());
 app.set('view engine', 'handlebars');
-app.set(express.static('public'));
+app.use(express.static('public'));
 
 // Inportanndo o banco de dados
 const connect = require('./Database/connect');
@@ -50,6 +50,17 @@ app.use((req, res, next) => {
     }
     next()
 })
+
+// Importação de rotas
+const ThoughtRouter = require('./rotas/thoughtsrouter');
+const ThoughtController = require('./controllers/thoughtController')
+const authRoutes = require('./rotas/authRoutes');
+
+// Configuraçao de rotas
+app.use('/thoughts', ThoughtRouter)
+app.use('/', authRoutes)
+app.get('/', ThoughtController.showThought)
+
 
 connect.sync().then(() => {
     app.listen(3000)

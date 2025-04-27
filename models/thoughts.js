@@ -3,7 +3,7 @@ const {DataTypes} = require('sequelize');
 
 const Database = require('../Database/connect');
 const User = require('../models/user');
-const Thought = Database.define('thought', {
+const Thought = Database.define('Thought', {
     title: {type: DataTypes.STRING,
     allowNull: false,
     required: true,    

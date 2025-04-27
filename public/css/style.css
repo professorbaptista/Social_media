@@ -1,0 +1,137 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #222;
+    color: #fff;
+}
+
+#navbar{
+    height: 60px;
+    width: 100%;
+    background-color: #2e2a2a;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #F6982d;
+
+    #logo img{
+        width: 40px;
+        height: 40px;
+        margin-right: 35px;
+        border: 50%;
+    }
+    
+    #logo img:hover{
+        font-size: 1.3rem;
+    }
+    ul{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10%;
+        list-style-type: none;
+        margin-left: 40px;
+    }
+
+    ul li a{
+        text-decoration: none;
+        color: #e0d6c9;
+        font-size: 1.2rem;
+        transition: 3ms;
+    }
+
+    ul li a:hover{
+        color: #F6982d;
+        font-size: 1.1rem;
+    }
+}
+
+/* Container */
+
+.container{
+    min-height: 70vh;
+    padding: 2rem;
+}
+
+/* Form-control */
+.auth-container{
+    max-width: 450px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+h2{
+    margin-bottom: 1em;
+    color: #fff;
+    border-left: 4px solid #F6982d;
+}
+
+.auth-container a{
+    color: #F6982d;
+
+}
+
+
+ .form-control{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1em;
+}
+
+.form-control label{
+    font-weight: bold;
+    margin-bottom: 0.5em;
+}
+
+.form-control input,
+.form-control textarea{
+    padding: 5px;
+    border-radius: 3px;
+    border: 1px solid #F6982d;
+    background-color: transparent;
+    outline: none;
+    color: #fff;
+    
+}
+.form-control[type="submit"],
+.btn{
+    background-color: transparent;
+    border: 2px solid #F6982d;
+    padding: .5em 1.2em;
+    margin-bottom: 1em;
+    color: #F6982d;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+
+}
+
+.form-control[type="submit"]:hover,
+.btn:hover{
+    background-color: #F6982d;
+    color: #fff;
+}
+
+
+/* Footer */
+.footer{
+    height: 120px;
+    background-color: rgb(97, 97, 90);
+    border-top: 1px solid #F6982d;
+
+    p{
+        color: rgb(236, 224, 208);
+        text-align: center;
+        font-size: 1.3rem;
+        margin-top: 18px;
+    }
+    span{
+        color: #F6982d;
+        font-size: 1.2rem;
+    }
+}
