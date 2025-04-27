@@ -1,2 +1,2 @@
 # Social_media
-Rede social para pensamento criiticos, criativo e inovador em diversas areas de saber
+Rede social para pensamentos criticos, criativos e inovador em diversas áreas de saber.
