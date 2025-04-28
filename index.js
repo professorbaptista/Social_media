@@ -29,13 +29,13 @@ app.use(session({
     saveUninitialized: false,
     store: new fileStore({
         logFn: function(){},
-        path: require('path').join('os')
+        path: require('path').join(('os'))
     }),
 
     cookie: {
         secure: false,
         maxAge: 360000,
-        express: new Date(Date.now() + 360000),
+        expires: new Date(Date.now() + 360000),
         httpOnly: true,
     }
 })) 
@@ -50,11 +50,20 @@ app.use((req, res, next) => {
     }
     next()
 })
+ 
+// Middleware to parse JSON bodies 
+app.use(express.urlencoded({
+    extended: true
+}))
+
+
+app.use(express.json()); 
 
 // Importação de rotas
 const ThoughtRouter = require('./rotas/thoughtsrouter');
 const ThoughtController = require('./controllers/thoughtController')
 const authRoutes = require('./rotas/authRoutes');
+
 
 // Configuraçao de rotas
 app.use('/thoughts', ThoughtRouter)

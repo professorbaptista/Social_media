@@ -117,6 +117,17 @@ h2{
     color: #fff;
 }
 
+/* Flash messages */
+.message{
+    height: 40px;
+    width: 450px;
+    padding: 20px;
+    margin: 10px auto;
+    border-radius: 8px;
+    background-color: #364231;
+    color: #f24;
+    font-size: 1.2em;
+}
 
 /* Footer */
 .footer{
